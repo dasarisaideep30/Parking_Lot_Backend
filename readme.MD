@@ -83,5 +83,5 @@ Once the application is running, you can access a simple web console to view the
 
 * **URL:** `http://localhost:8080/h2-console`
 * **JDBC URL:** `jdbc:h2:mem:parkinglotdb`
-* **User Name:** `sa`
-* **Password:** (leave this blank)
+* **User Name:** `saideep`
+* **Password:** `password`

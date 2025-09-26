@@ -1,12 +1,36 @@
-server:
-  port: 8080
-
+# This file controls both local and deployed environments
 spring:
+  profiles:
+    active: local # By default, use the 'local' profile on your computer
+
+---
+
+# --- 'local' profile settings ---
+spring:
+  config:
+    activate:
+      on-profile: local
+  # For local runs, use a simple in-memory H2 database
   datasource:
-    # These placeholders will be read from environment variables on your hosting platform
-    url: ${SPRING_DATASOURCE_URL}
-    username: ${SPRING_DATASOURCE_USERNAME}
-    password: ${SPRING_DATASOURCE_PASSWORD}
+    url: jdbc:h2:mem:testdb
+    username: sa
   jpa:
     hibernate:
-      ddl-auto: update # For production, this is often set to 'validate'
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+---
+
+# --- 'prod' profile settings ---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  # For production, use the URL provided by Railway
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+  jpa:
+    hibernate:
+      ddl-auto: update

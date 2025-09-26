@@ -85,3 +85,16 @@ Once the application is running, you can access a simple web console to view the
 * **JDBC URL:** `jdbc:h2:mem:parkinglotdb`
 * **User Name:** `saideep`
 * **Password:** `password`
+
+To view the data in the sql statement box type one of the following commands and click Run.
+* To see all the floors you have created:
+
+         SELECT * FROM FLOORS;
+
+* To see all the slots:
+
+        SELECT * FROM SLOTS;
+
+* To see all the reservations:
+
+        SELECT * FROM RESERVATIONS;

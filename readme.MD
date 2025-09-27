@@ -98,3 +98,5 @@ To view the data in the sql statement box type one of the following commands and
 * To see all the reservations:
 
         SELECT * FROM RESERVATIONS;
+
+DEPLOY LINK :- https://parking-lot-backend-2.onrender.com
